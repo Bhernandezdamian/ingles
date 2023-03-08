@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verbos Irregulares en Inglés</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 160vh;
+      
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    input[type="text"].correct {
+      border-color: green;
+    }
+    input[type="text"].incorrect {
+      border-color: red;
+    }
+    #submit {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 16px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+    .verb {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    td:nth-child(1) {
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Complete the next chart(Irregular verbs)</h1>
+
+  <table>
+    <tr>
+      <th>Verbo</th>
+      <th>Pasado Simple</th>
+      <th>Past Participle</th>
+    </tr>
+    <tr>
+      <td>feel</td>
+      <td><input type="text" id="ps-0"></td>
+      <td><input type="text" id="pp-0"></td>
+    </tr>
+    <tr>
+      <td>sell</td>
+      <td><input type="text" id="ps-1"></td>
+      <td><input type="text" id="pp-1"></td>
+    </tr>
+    <tr>
+      <td>go</td>
+      <td><input type="text" id="ps-2"></td>
+      <td><input type="text" id="pp-2"></td>
+    </tr>
+    <tr>
+      <td>buy</td>
+      <td><input type="text" id="ps-3"></td>
+      <td><input type="text" id="pp-3"></td>
+    </tr>
+    <tr>
+      <td>shake</td>
+      <td><input type="text" id="ps-4"></td>
+      <td><input type="text" id="pp-4"></td>
+    </tr>
+    <tr>
+      <td>lose</td>
+      <td><input type="text" id="ps-5"></td>
+      <td><input type="text" id="pp-5"></td>
+    </tr>
+    <tr>
+      <td>break</td>
+      <td><input type="text" id="ps-6"></td>
+      <td><input type="text" id="pp-6"></td>
+    </tr>
+    <tr>
+      <td>tell</td>
+      <td><input type="text" id="ps-7"></td>
+      <td><input type="text" id="pp-7"></td>
+    </tr>
+    <
+      <tr>
+        <td>meet</td>
+        <td><input type="text" id="ps-8"></td>
+        <td><input type="text" id="pp-8"></td>
+      </tr>
+      <tr>
+        <td>sing</td>
+        <td><input type="text" id="ps-9"></td>
+        <td><input type="text" id="pp-9"></td>
+      </tr>
+      <tr>
+        <td>drink</td>
+        <td><input type="text" id="ps-10"></td>
+        <td><input type="text" id="pp-10"></td>
+      </tr>
+      <tr>
+        <td>begin</td>
+        <td><input type="text" id="ps-11"></td>
+        <td><input type="text" id="pp-11"></td>
+      </tr>
+      <tr>
+        <td>read</td>
+        <td><input type="text" id="ps-12"></td>
+        <td><input type="text" id="pp-12"></td>
+      </tr>
+      <tr>
+        <td>think</td>
+        <td><input type="text" id="ps-13"></td>
+        <td><input type="text" id="pp-13"></td>
+      </tr>
+      <tr>
+        <td>become</td>
+        <td><input type="text" id="ps-14"></td>
+        <td><input type="text" id="pp-14"></td>
+      </tr>
+    </table>
+  <button id="submit" onclick="checkAnswers()">revisar</button>
+  
+    <p id="result"></p>
+    <script>
+      function checkAnswers() {
+        // Lista de verbos y sus respuestas correctas
+        const verbs = [
+          { base: 'feel', ps: 'felt', pp: 'felt' },
+          { base: 'sell', ps: 'sold', pp: 'sold' },
+          { base: 'go', ps: 'went', pp: 'gone' },
+          { base: 'buy', ps: 'bought', pp: 'bought' },
+          { base: 'shake', ps: 'shook', pp: 'shaken' },
+          { base: 'lose', ps: 'lost', pp: 'lost' },
+          { base: 'break', ps: 'broke', pp: 'broken' },
+          { base: 'tell', ps: 'told', pp: 'told' },
+          { base: 'meet', ps: 'met', pp: 'met' },
+          { base: 'sing', ps: 'sang', pp: 'sung' },
+          { base: 'drink', ps: 'drank', pp: 'drunk' },
+          { base: 'begin', ps: 'began', pp: 'begun' },
+          { base: 'read', ps: 'read', pp: 'read' },
+          { base: 'think', ps: 'thought', pp: 'thought' },
+          { base: 'become', ps: 'became', pp: 'become' }
+        ];
+  
+        // Bandera para indicar si todas las respuestas son correctas
+        let allCorrect = true;
+  
+        // Recorre cada input de texto y verifica si la respuesta es correcta
+        for (let i = 0; i < verbs.length; i++) {
+          const psInput = document.getElementById(`ps-${i}`);
+          const ppInput  = document.getElementById(`pp-${i}`);
+              // Verifica si las respuestas son correctas y actualiza el estilo y la bandera
+    if (psInput.value.toLowerCase() === verbs[i].ps && ppInput.value.toLowerCase() === verbs[i].pp) {
+      psInput.style.backgroundColor = 'green';
+      ppInput.style.backgroundColor = 'green';
+    } else {
+      psInput.style.backgroundColor = 'red';
+      ppInput.style.backgroundColor = 'red';
+      allCorrect = false;
+    }
+  }
+
+// Función para generar un código al responder correctamente todos los ejercicios
+function generateCode() {
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let code = "";
+  for (let i = 0; i < 8; i++) {
+    code += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  const codeDiv = document.createElement("div");
+  codeDiv.innerHTML = "¡Felicidades! Tu código es: <strong>" + code + "</strong>";
+  document.body.appendChild(codeDiv);
+}
+
+// Muestra un mensaje según si todas las respuestas son correctas o no
+const resultElement = document.getElementById('result');
+if (allCorrect) {
+  generateCode(); // llamada a la función para generar el código
+  resultElement.innerHTML = '¡Felicidades! Todas las respuestas son correctas.';
+} else {
+  resultElement.innerHTML = 'Revisa las respuestas incorrectas y vuelve a intentarlo.';
+}
+
+
+
+
+  
+  }
+
+</script>
+</body>
+</html>
+         

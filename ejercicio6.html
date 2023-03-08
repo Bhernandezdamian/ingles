@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de gramática</title>
+	<link rel="stylesheet" type="text/css" href="ejercicio6.css">
+	<style>
+		body {
+              
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+            background-color: rgb(153, 202, 221);
+		}
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+    
+        #exercises {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+    
+        p {
+            margin-bottom: 1em;
+        }
+    
+        input {
+            
+            width: 10em;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #3e8e41;
+        }
+    
+        #result {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body onload="shuffle()">
+    <h2>Instructions: Identify the correct grammatical tense.</h2> <!-- texto de instrucción -->
+	<h1>Instructions: Identify the correct grammatical tense.</h1>
+
+
+
+	<h1>Complete the next sentences use never just in negative form.
+        
+    </h1>
+    
+	<div id="exercises">
+		<p> Dante <input id="exercise1" type="text">(drink/not)beer</p>
+		<p> Luis Antonio  <input id="exercise2" type="text">(lose) $500 in the street </p>
+		<p> Sergio <input id="exercise3" type="text">(do/not) homework </p>
+		<p> Itzel and Karla  <input id="exercise4" type="text">(live) in Nicolas Romero </p>
+        <p> Carlos <input id="exercise5" type="text">(follow) you on instagram </p>
+        <p> Uriel and Isaac <input id="exercise6" type="text">(work) toguether since 2021 </p>
+        <p> Joselin <input id="exercise7" type="text">(arrive/not) late at home  </p>
+        <p> Ivan and Jose Armando <input id="exercise8" type="text">(be) good friends since first grade </p>
+        <p> Juana <input id="exercise9" type="text">(swim) since 2010  </p>
+        <p> Antonio <input id="exercise10" type="text">(steal/not) anything  </p>
+        
+	</div>
+	<button onclick="checkAnswers()">Verificar respuestas</button>
+    <button onclick="location.reload()">Recargar página</button>
+	<div id="result"></div>
+	<script src="ejercicio6.js"></script>
+</body>
+</html>
+
+
+
+
+    

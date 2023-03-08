@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de gramática</title>
+	<link rel="stylesheet" type="text/css" href="ejercicio4.css">
+	<style>
+		body {
+              
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+            background-color: rgb(153, 202, 221);
+		}
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+    
+        #exercises {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+    
+        p {
+            margin-bottom: 1em;
+        }
+    
+        input {
+            
+            width: 10em;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #3e8e41;
+        }
+    
+        #result {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body onload="shuffle()">
+    <h2>Instructions: Identify the correct grammatical tense.</h2> <!-- texto de instrucción -->
+	<h1>Instructions: Identify the correct grammatical tense.</h1>
+
+
+
+	<h1>Instructions: Identify the correct grammatical tense.</h1>
+	<div id="exercises">
+		<p> I have  seen an UFO<input id="exercise1" type="text"></p>
+		<p>Alex and Gibran have wrote a letter<input id="exercise2" type="text"></p>
+		<p> I ate a pizza yesterday<input id="exercise3" type="text"></p>
+		<p>she was playing with me<input id="exercise4" type="text"></p>
+        <p>I am a student <input id="exercise5" type="text"></p>
+        <p>Tadeo is a doctor<input id="exercise6" type="text"></p>
+        <p>Vianey slept too late the day before yesterday<input id="exercise7" type="text"></p>
+        <p>I didn't smoke<input id="exercise8" type="text"></p>
+        <p>Mario cooks chilaquiles<input id="exercise9" type="text"></p>
+        <p>My boyfriend has changed for me<input id="exercise10" type="text"></p>
+        <p>I have never climbed a mountain<input id="exercise11" type="text"></p>
+	</div>
+	<button onclick="checkAnswers()">Verificar respuestas</button>
+    <button onclick="location.reload()">Recargar página</button>
+	<div id="result"></div>
+	<script src="ejercicio4.js"></script>
+</body>
+</html>
+
+
+
+
+    

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de gramática</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		body {
+              
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+            background-color: rgb(153, 202, 221);
+		}
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+    
+        #exercises {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+    
+        p {
+            margin-bottom: 1em;
+        }
+    
+        input {
+            
+            width: 10em;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #3e8e41;
+        }
+    
+        #result {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body onload="shuffle()">
+	<h1>Write and complete the nex question with present perfect.</h1>
+	<div id="exercises">
+		<p> <input id="exercise1" type="text"> you<input id="exercise2" type="text"><input id="exercise3" type="text">(take)a cold shower?</p>
+		<p><input id="exercise4" type="text"> Alan<input id="exercise5" type="text"><input id="exercise6" type="text">(dream)with his girlfriend?</p>
+		<p> <input id="exercise7" type="text"> Roberto and Paulina<input id="exercise8" type="text"><input id="exercise9" type="text">(be)in Monterrey?</p>
+		<p> <input id="exercise10" type="text">you<input id="exercise11" type="text"><input id="exercise12" type="text">(sell)oranges?</p>
+		<p><input id="exercise13" type="text"> he<input id="exercise14" type="text"><input id="exercise15" type="text">(wake-up) at 03:00am? </p>
+	</div>
+	<button onclick="checkAnswers()">Verificar respuestas</button>
+    <button onclick="location.reload()">Recargar página</button>
+	<div id="result"></div>
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+    
